@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>MajoresVapers.es | Vapers Desechables y CIGARRILLOS ELECTRONICOS</title>
+    <meta name="description"
+        content="MajoresVapers.es reúne vapers desechables, CIGARRILLOS ELECTRONICOS desechables y muchas caladas con sabores vaper únicos. Entrega rápida y atención 100% española.">
+    <meta name="keywords"
+        content="caladas,vapers desechables,vaper desechable,vaper con nicotina,CIGARRILLOS ELECTRONICOS,muchas caladas,sabores vaper,puff,CIGARRILLOS ELECTRONICOS desechables">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon placeholders -->
+
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+</head>
+
+<body>
+
+    <!-- Header / Hero Section Wrapper for the "Yellow" background look -->
+    <div class="header-hero-wrapper">
+        <div id="ageModal" class="modal">
+            <div class="modal-content">
+                <h2>¿Tienes 18 años o más?</h2>
+                <div class="buttons">
+                    <button id="yesBtn">Sí</button>
+                    <button id="noBtn">No</button>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="warn">
+            ADVERTENCIA: ESTE PRODUCTO CONTIENE NICOTINA. LA NICOTINA ES UNA SUSTANCIA
+            ADICTIVA.
+        </h1>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <button class="hamburger-menu" id="hamburger-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="nav-logo">
+                    <img src="favicon-96x96.png" alt="Elvapero vapers desechables y cigarrillos electrónicos" />
+                </a>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="https://elvapero.es/" class="active">Página Principal</a></li>
+                    <li><a href="https://elvapero.es/">Productos</a></li>
+                    <li><a href="https://elvapero.es/">Sobre nosotros</a></li>
+                    <li><a href="https://elvapero.es/">Blog</a></li>
+                    <li><a href="https://elvapero.es/">Contacto</a></li>
+                </ul>
+
+                <div class="header-contact">
+                    <a href="https://elvapero.es/" class="nav-phone">Colecciones</a>
+                    <a href="https://elvapero.es" class="cart-icon" aria-label="Carrito">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <header class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-subtitle">CIGARRILLOS ELECTRONICOS</p>
+                    <h1 class="hero-title">
+                        Vapers Desechables <br>
+                    </h1>
+                    <div class="hero-tags">
+                        <span>Muchas Caladas</span> <span>Vapers Desechables</span> <span>Sabores Vaper</span>
+                        <span>Puff</span>
+                    </div>
+                    <a href="https://elvapero.es/" class="btn btn-primary hero-btn">Ver más</a>
+                </div>
+                <!-- Custom Slider as Hero Image/Feature -->
+                <div class="hero-slider-container">
+                    <div class="hero-slider" id="hero-slider">
+                        <!-- Slides will be injected or static here -->
+                        <div class="slide active">
+                            <div class="slide-image-wrapper">
+                                <!-- Placeholder for generated image -->
+                                <div class="slide-img-placeholder"
+                                    style="background: radial-gradient(circle, #ffbd2e, #f5a623);"></div>
+                                <img src="" alt="Vapers desechables y cigarrillos electrónicos con muchas caladas" class="slide-img" id="slide-img-1"
+                                    style="display:none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-dots" id="slider-dots"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Curved bottom decoration (white part overlapping yellow) -->
+        <div class="hero-curve">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z">
+                </path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Floating Badge/Logo Area (mimicking the "Nut Stop" badge) -->
+    <div class="floating-badge">
+        <div class="badge-inner">
+            <span class="badge-text">Majores</span>
+            <span class="badge-sub">Vapers</span>
+        </div>
+    </div>
+
+    <main id="productos">
+        <!-- Category/Brands Icons Section -->
+        <section class="section categories-section">
+            <div class="container">
+                <h2 class="section-title">Top Marcas de CIGARRILLOS ELECTRONICOS</h2>
+
+                <div class="categories-grid">
+                    <!-- Brand Items -->
+                    <a href="https://www.elvapero.es/collections/vapsolo-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/vapsolo.png" alt="Vapsolo vapers desechables y cigarrillos electrónicos"></div>
+                        <span>Vapsolo</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/vozol-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/vozol.webp" alt="Vozol vaper desechable y sabores vaper">
+                        </div>
+                        <span>Vozol</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/hayati-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/Hayati.avif" alt="Hayati puff y vaper con nicotina"></div>
+                        <span>Hayati</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/merrymi-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/merryMi.avif" alt="Merry-Mi cigarrillos electrónicos desechables">
+                        </div>
+                        <span>MerryMi</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/jnr-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/JNR.png" alt="JNR vapers desechables con muchas caladas"></div>
+                        <span>JNR</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/fumot-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/Fumot.webp" alt="Fumot Tornado vapers desechables y caladas">
+                        </div>
+                        <span>Fumot</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/adalya-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/Adalya.png" alt="Adalya sabores vaper y vaper desechable"></div>
+                        <span>Adalya</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/al-fakher-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/AlFakher.png" alt="Al Fakher vaper con nicotina y puff">
+                        </div>
+                        <span>Al Fakher</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/blur-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/Blur.webp" alt="BLUR vapers desechables y cigarrillos electrónicos"></div>
+                        <span>BLUR</span>
+                    </a>
+                    <a href="https://www.elvapero.es/collections/ghost-vapes-desechables" class="cat-item">
+                        <div class="cat-icon"><img src="images/logo/Ghost.avif" alt="Ghost muchas caladas vaper desechable"></div>
+                        <span>Ghost</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Product Sections -->
+        <section class="section product-section grey-bg" id="vapsolo">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Colección VapSolo</h2>
+                    <a href="https://www.elvapero.es/collections/vapsolo-vapes-desechables" class="view-all-link">Ver
+                        más
+                        &rarr;</a>
+                </div>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-tag hot">TOP VENTAS</div>
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-vapsolo">
+                                <img src="images/products/VapSolo-Master-70K-Espana-Vaper-Desechable-Lemon-Lime-70000-Caladas.png"
+                                    alt="VapSolo Master 70K muchas caladas vaper desechable sabores vaper">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Master 70K</h3>
+                            <p class="product-desc">Lo último de VapSolo con 70000 caladas y sabor intenso para una
+                                experiencia premium.</p>
+                            <div class="product-bottom">
+                                <span class="price">70000 caladas</span>
+                                <a href="https://www.elvapero.es/products/vapsolo-master-70k-caladas-70000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-tag">Novedad</div>
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-vapsolo">
+                                <img src="images/products/VapSolo-Mars-50K-Espana-Vaper-Desechable-Peach-Berry-50000-Caladas.png"
+                                    alt="VapSolo Mars 50K vaper con nicotina puff vapers desechables">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mars 50K</h3>
+                            <p class="product-desc">El todoterreno de VapSolo, potencia y duración garantizada en cada
+                                puff con 50000 caladas.</p>
+                            <div class="product-bottom">
+                                <span class="price">50000 caladas</span>
+                                <a href="https://www.elvapero.es/products/vapsolo-mars-50k-caladas-50000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="product-tag">Populares</div>
+                            <div class="img-placeholder p-vapsolo">
+                                <img src="images/products/VapSolo-King-Pro-40K-Espana-Vaper-Desechable-Love-66-40000-Caladas.png"
+                                    alt="VapSolo King Pro 40K cigarrillos electrónicos desechables caladas">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>King Pro 40K</h3>
+                            <p class="product-desc">Elegancia y rendimiento en un vaper desechable diseñado para durar
+                                hasta 40000 caladas.</p>
+                            <div class="product-bottom">
+                                <span class="price">40000 caladas</span>
+                                <a href="https://www.elvapero.es/products/vapsolo-king-pro-40k-caladas-40000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Merry-Mi -->
+        <section class="section product-section" id="merry-mi">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Colección MerryMi</h2>
+                    <a href="https://elvapero.es/collections/merrymi-vapes-desechables" class="view-all-link">Ver más
+                        &rarr;</a>
+                </div>
+                <div class="products-grid">
+                    <!-- Products will be styled as cards -->
+                    <article class="product-card">
+                        <div class="product-tag">Novedad</div>
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-merry">
+                                <img src="images/products/MerryMi-Panda-Twins-40K-Espana-Vaper-Desechable-Lemon-Lime-Pink-Lemonade-40000-Caladas.png"
+                                    alt="Panda X 40K vaper desechable con muchas caladas sabores vaper">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Panda X 40K</h3>
+                            <p class="product-desc">Vaper desechable con nicotina y puff de frambuesa, perfecto para
+                                muchas caladas.</p>
+                            <div class="product-bottom">
+                                <span class="price">40000 caladas</span>
+                                <a href="https://elvapero.es/products/merrymi-panda-twins-40k-caladas-40000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-tag">Novedad</div>
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-merry">
+                                <img src="images/products/MerryMi-Kitty-20K-Espana-Vaper-Desechable-Cactus-Candy-20000-Caladas..png"
+                                    alt="Kitty 20K puff vaper con nicotina vapers desechables">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kitty 20K</h3>
+                            <p class="product-desc">Diseño compacto para puff rápido, ideal para quien busca un vaper
+                                con nicotina sin renunciar al sabor.</p>
+                            <div class="product-bottom">
+                                <span class="price">20000 caladas</span>
+                                <a href="https://elvapero.es/products/merrymi-kitty-20k-caladas-20000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="product-tag">Novedad</div>
+                            <div class="img-placeholder p-merry">
+                                <img src="images/products/MerryMi-Mecha-X-28K-Espana-Vaper-Desechable-Crazy-Blueberry-28000-Caladas.png"
+                                    alt="Mecha X 28K cigarrillos electrónicos desechables sabores vaper puff">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mecha X 28K</h3>
+                            <p class="product-desc">Sabores vaper intensos en un formato vaper desechable que mantiene
+                                la potencia hasta 28K puff.</p>
+                            <div class="product-bottom">
+                                <span class="price">28000 caladas</span>
+                                <a href="https://elvapero.es/products/merrymi-mecha-x-28k-caladas-28000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- JNR -->
+        <section class="section product-section grey-bg" id="jnr">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Colección JNR</h2>
+                    <a href="https://www.elvapero.es/collections/jnr-vapes-desechables" class="view-all-link">Ver más
+                        &rarr;</a>
+                </div>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-tag hot">4en1</div>
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-jnr">
+                                <img src="images/products/JNR-Quads-4-en-1-120K-Espana-Vaper-Desechable-Summer-Peaches-Strawberry-Ice-Watermelon-Ice-Black-Ice-120000-Caladas.png"
+                                    alt="JNR Quads 120K vapers desechables muchas caladas cigarrillos electrónicos">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Quads 4 en 1 120K</h3>
+                            <p class="product-desc">Caladas interminables, el puff ideal para el vaper desechable
+                                premium.</p>
+                            <div class="product-bottom">
+                                <span class="price">120000 caladas</span>
+                                <a href="https://www.elvapero.es/products/jnr-quads-120k-caladas-120000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-jnr">
+                                <img src="images/products/JNR-RageGorilla-55K-Espana-Vaper-Desechable-Strawberry-Ice-55000-Caladas.png"
+                                    alt="JNR RageGorilla 55K puff vaper desechable sabores vaper">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>RageGorilla 55K</h3>
+                            <p class="product-desc">Clásico revitalizado con sabor kiwi sandía y muchas caladas seguras.
+                            </p>
+                            <div class="product-bottom">
+                                <span class="price">55000 caladas</span>
+                                <a href="https://www.elvapero.es/products/jnr-ragegorilla-55k-caladas-55000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="product-tag hot">3en1</div>
+
+                            <div class="img-placeholder p-jnr">
+                                <img src="images/products/JNR-Triple-3-en-1-110K-Espana-Vaper-Desechable-Blue-Razz-Cherry-Blue-Razz-Ice-Black-Ice-110000-Caladas.png"
+                                    alt="JNR Triple 110K vaper con nicotina muchas caladas vapers desechables">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Triple 3 en 1 110K</h3>
+                            <p class="product-desc">Estilo salvaje y sabor intenso para quienes buscan un vaper con
+                                carácter.</p>
+                            <div class="product-bottom">
+                                <span class="price">110000 caladas</span>
+                                <a href="https://www.elvapero.es/products/jnr-triple-110k-caladas-110000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fumot -->
+        <section class="section product-section" id="fumot">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Colección Fumot </h2>
+                    <a href="https://www.elvapero.es/collections/fumot-vapes-desechables" class="view-all-link">Ver más
+                        &rarr;</a>
+                </div>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="product-tag novedad">Novedad</div>
+                            <div class="img-placeholder p-fumot">
+                                <img src="images/products/Fumot-Eco-2-en-1-50K-Espana-Vaper-Desechable-Cactus-Ice-Cactus-Kiwi-50000-Caladas.png"
+                                    alt="Fumot Eco 2 en 1 50K cigarrillos electrónicos desechables caladas puff">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Eco 2 en 1 50K</h3>
+                            <p class="product-desc">Fumot Eco 2 en 1 50K: vaper desechable con sabor cactus ice y muchas
+                                caladas intensas.</p>
+                            <div class="product-bottom">
+                                <span class="price">50000 caladas</span>
+                                <a href="https://elvapero.es/products/fumot-eco-2w1-50k-caladas-50000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-fumot">
+                                <img src="images/products/Fumot-RandM-Tornado-15K-Espana-Vaper-Desechable-Grape-Ice-15000-Caladas.png"
+                                    alt="Fumot Tornado 15K vaper desechable sabores vaper muchas caladas">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Tornado 15K</h3>
+                            <p class="product-desc">Tornado 15K: legendario puff y vaper con nicotina perfectamente
+                                equilibrado.</p>
+                            <div class="product-bottom">
+                                <span class="price">15000 caladas</span>
+                                <a href="https://www.elvapero.es/products/fumot-tornado-15k-caladas-15000"
+                                    class="btn btn-sm">COMPRAR AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-fumot">
+                                <img src="images/products/Fumot-T9000-9K-Espana-Vaper-Desechable-Watermelon-Ice-9000-Caladas.png"
+                                    alt="Fumot T9000 9K puff vaper con nicotina vapers desechables">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>T9000 9K</h3>
+                            <p class="product-desc">T9000 9K: suave para comenzar tu rutina de puff con sabor sandía
+                                helada.</p>
+                            <div class="product-bottom">
+                                <span class="price">9000 caladas</span>
+                                <a href="https://www.elvapero.es/products/fumot-t9000-9k-caladas-9000"
+                                    class="btn btn-sm">COMPRAR
+                                    AHORA</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adalya & Al Fakher Mixed Row for visual variety -->
+        <section class="section product-section grey-bg" id="adalya">
+            <div class="container">
+                <h2 class="section-title center-text">Adalya & Al Fakher</h2>
+                <div class="products-grid four-col">
+                    <!-- Adalya -->
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-adalya">
+                                <img src="images/products/Adalya-ADL-PRO360-20K-Espana-Vaper-Strawberry-splash-20000-Caladas.png"
+                                    alt="Adalya ADL Pro 360 20K muchas caladas vaper desechable sabores vaper">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>ADL Pro 360 20K</h3>
+                            <p class="product-desc">ADL Pro 360 20K: dulces exóticos en un vaper desechable con 20000
+                                caladas.</p>
+                            <a href="https://elvapero.es/products/adalya-adl-pro-360-20k-caladas-20000"
+                                class="btn btn-sm full-width">COMPRAR AHORA</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-adalya">
+                                <img src="images/products/Adalya-16K-Espana-Vaper-Desechable-Chewing-Gummelon-16000-Caladas.png"
+                                    alt="Adalya ADL16000 16K puff vaper con nicotina cigarrillos electrónicos">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3> Adalya ADL16000 16K</h3>
+                            <p class="product-desc">Adalya ADL16000 16K: puff brillante y refrescante con muchas caladas
+                                ligeras.</p>
+                            <a href="https://elvapero.es/products/adalya-adl16000-16k-caladas-16000"
+                                class="btn btn-sm full-width">COMPRAR AHORA</a>
+                        </div>
+                    </article>
+                    <!-- Al Fakher -->
+                    <article class="product-card">
+                        <div class="product-img-box">
+                            <div class="img-placeholder p-alfakher">
+                                <img src="images/products/Al-Fakher-Crown-Bar-EHose-X-60K-Espana-Vaper-Desechable-berry-blue-60000-Caladas.png"
+                                    alt="Al Fakher Crown Bar 60K vapers desechables muchas caladas puff">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Crown Bar EHose X 60K</h3>
+                            <p class="product-desc">Crown Bar EHose X 60K: 60000 caladas de bayas azules y vaper con
+                                nicotina
+                                armoniosa.</p>
+                            <a href="https://elvapero.es/products/al-fakher-crown-bar-e-hose-x-60k-caladas-60000"
+                                class="btn btn-sm full-width">COMPRAR AHORA</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AirMez, Blur, Ghost -->
+        <section class="section product-section" id="others">
+            <div class="container">
+                <h2 class="section-title mb-4">Liquidación</h2>
+                <div class="products-list-view">
+                    <!-- AirMez -->
+                    <div class="list-item">
+                        <div class="item-img">
+                            <div class="img-placeholder small p-airmez">
+                                <img src="images/products/AirMez-12K-Espana-Vaper-Desechable-blueberry-pomegranate-12000-Caladas.png"
+                                    alt="AirMez 12K vaper desechable sabores vaper caladas">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>AirMez 12K</h3>
+                            <p>AirMez 12K: ritmo y sabor para muchas caladas de fiesta.</p>
+                        </div>
+                        <a href="https://elvapero.es/products/airmez-12k-caladas-12000" class="btn btn-outline">COMPRAR
+                            AHORA</a>
+                    </div>
+                    <!-- Blur -->
+                    <div class="list-item">
+                        <div class="item-img">
+                            <div class="img-placeholder small p-blur">
+                                <img src="images/products/Blur-15000-15K-Espana-Vaper-Desechable-Strawberry-Grape-15000-Caladas.png"
+                                    alt="Blur 15K vaper con nicotina cigarrillos electrónicos desechables">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Blur 15000 15K</h3>
+                            <p>Blur 15K: pura comodidad y caladas con sabor suave.</p>
+                        </div>
+                        <a href="https://elvapero.es/products/blur-15000-15k-caladas-15000"
+                            class="btn btn-outline">COMPRAR
+                            AHORA</a>
+                    </div>
+                    <!-- Ghost -->
+                    <div class="list-item">
+                        <div class="item-img">
+                            <div class="img-placeholder small p-ghost">
+                                <img src="images/products/Ghost-Galaxy-25K-Espana-Vaper-Desechable-Aussie-Lemonade-25000-Caladas.png"
+                                    alt="Ghost Galaxy 25K puff muchas caladas vapers desechables">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Ghost Galaxy 25K</h3>
+                            <p>Ghost Galaxy 25K: vapear inteligente con sabores vaper audaces.</p>
+                        </div>
+                        <a href="https://elvapero.es/products/ghost-galaxy-25k-caladas-25000"
+                            class="btn btn-outline">COMPRAR AHORA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="section reviews-section" id="reviews">
+            <div class="container">
+                <h2 class="section-title center-text">Opiniones de clientes</h2>
+                <div class="reviews-wrapper">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="avatar">JC</span>
+                            <div class="author-info">
+                                <h4>Juan Carlos M.</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Los vapers desechables de Elvapero.es me ofrecen muchas caladas y puff
+                            suave. La entrega fue inmediata."</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="avatar">AS</span>
+                            <div class="author-info">
+                                <h4>Ana Beln S.</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Las caladas del Fumot Tornado son perfectas para un vaper con nicotina;
+                            Elvapero.es tiene los mejores precios y envo gratuito."</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="avatar">PN</span>
+                            <div class="author-info">
+                                <h4>Pedro Navarro</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Ghost Smart 40K me da muchas caladas con sabores vaper audaces, seguro
+                            vuelvo por más."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Delivery & About Section -->
+        <section class="section delivery-section" id="sobre-nosotros">
+            <div class="container delivery-container">
+                <div class="delivery-info">
+                    <h3>Entrega</h3>
+                    <ul class="info-list">
+                        <li>
+                            <span class="icon">🚚</span>
+                            <div>
+                                <strong>Envo gratis</strong>
+                                <p>Despechamos en 24h a toda la pennsula.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">⚡</span>
+                            <div>
+                                <strong>Despacho rápido</strong>
+                                <p>Tu vaper desechable listo para recibir muchas caladas.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📦</span>
+                            <div>
+                                <strong>Embalaje discreto</strong>
+                                <p>Protegemos cada puff y cada cigarrillo electrónico desechable.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="cta-wrapper">
+                        <a href="https://www.elvapero.es" class="btn btn-primary full-width big-btn">Solicitar envío
+                            gratis</a>
+                    </div>
+                </div>
+                <div class="delivery-text-content">
+                    <h3>¿Por qué elegir Elvapero.es?</h3>
+                    <p>
+                        En Elvapero.es combinamos los mejores vapers desechables con coberturas de sabores vaper
+                        diseñadas para el puff diario. Siempre trabajamos con CIGARRILLOS ELECTRONICOS originales y
+                        equipos pensados para satisfacer al amante del vaper con nicotina.
+                    </p>
+                    <p>
+                        Ofrecemos muchas caladas, puff suave y opciones de CIGARRILLOS ELECTRONICOS desechables en un
+                        catálogo actualizado cada semana. Cuidamos cada detalle para que compres con confianza y
+                        disfrutes la potencia del vaper desechable ideal.
+                    </p>
+                    <p class="toggle-link"><a href="#home">Ver menos</a></p>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="social">
+            <div class="footer-logo">
+                <a href="index.html" class="logo">
+                    <img src="favicon-96x96.png" alt="Elvapero vapers desechables y cigarrillos electrónicos de confianza" />
+                </a>
+            </div>
+            <div>
+                <a href="https://elvapero.es/">
+                    <svg viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z">
+                            </path>
+                            <path
+                                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <a href="https://elvapero.es">
+                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+                        viewBox="0 0 14.906 32" height="40px">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M14.874,11.167 L14.262,14.207 C14.062,15.208 13.100,15.992 12.072,15.992 L10.000,15.992 L10.000,30.000 C10.000,31.104 9.159,32.000 8.049,32.000 L5.030,32.000 C3.920,32.000 3.017,31.102 3.017,29.999 L3.017,15.992 L2.011,15.992 C0.901,15.992 -0.002,15.095 -0.002,13.991 L-0.002,10.990 C-0.002,9.887 0.901,8.989 2.011,8.989 L3.017,8.989 L3.017,6.003 C3.017,2.716 5.693,0.041 8.994,0.013 C9.015,0.012 9.033,0.001 9.055,0.001 L13.081,0.001 C13.636,0.001 14.000,0.448 14.000,1.000 L14.000,6.000 C14.000,6.553 13.636,7.004 13.081,7.004 L10.061,7.004 L10.060,8.989 L13.079,8.989 C13.645,8.989 14.167,9.228 14.509,9.644 C14.852,10.059 14.985,10.615 14.874,11.167 ZM9.092,10.990 C9.078,10.991 9.067,10.998 9.053,10.998 L9.053,10.998 C8.497,10.997 8.046,10.549 8.047,9.997 L8.047,9.990 C8.047,9.990 8.047,9.990 8.047,9.990 C8.047,9.990 8.047,9.990 8.047,9.990 L8.049,6.003 C8.049,5.450 8.499,5.003 9.055,5.003 L12.074,5.003 L12.074,2.002 L9.094,2.002 C9.077,2.002 9.063,2.011 9.045,2.011 C6.831,2.011 5.030,3.802 5.030,6.003 L5.030,10.005 C5.030,10.558 4.579,11.006 4.023,11.006 C3.996,11.006 3.973,10.992 3.946,10.990 L2.011,10.990 L2.011,13.991 L4.023,13.991 C4.579,13.991 5.030,14.439 5.030,14.992 C5.030,15.044 5.008,15.088 5.000,15.138 L5.000,30.000 L8.049,29.999 L8.049,15.002 C8.049,14.998 8.047,14.995 8.047,14.992 C8.047,14.439 8.497,13.991 9.053,13.991 L12.072,13.991 C12.145,13.991 12.275,13.886 12.288,13.816 L12.857,10.990 L9.092,10.990 Z">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <a href="https://elvapero.es">
+                    <svg viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                        fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: black;
+                                        stroke: rgba(255, 255, 255, 0.842);
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 1.89px;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="cls-1"
+                                d="M12.94,1.61V15.78a2.83,2.83,0,0,1-2.83,2.83h0a2.83,2.83,0,0,1-2.83-2.83h0a2.84,2.84,0,0,1,2.83-2.84h0V9.17h0A6.61,6.61,0,0,0,3.5,15.78h0a6.61,6.61,0,0,0,6.61,6.61h0a6.61,6.61,0,0,0,6.61-6.61V9.17l.2.1a8.08,8.08,0,0,0,3.58.84h0V6.33l-.11,0a4.84,4.84,0,0,1-3.67-4.7H12.94Z">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-cont">
+            <div class="foot-cont-one">
+                <div class="cont-col">
+                    <a href="https://www.elvapero.es/collections/fumot">Productos</a>
+                    <a href="https://elvapero.es/products/vapsolo-master-70k-caladas-70000">Master 70K</a>
+                    <a href="https://elvapero.es/products/vapsolo-mars-50k-caladas-50000">Mars 50K</a>
+                    <a href="https://elvapero.es/products/vapsolo-king-pro-40k-caladas-40000">King Pro 40K</a>
+                    <a href="https://elvapero.es/products/merrymi-panda-twins-40k-caladas-40000">Panda X 40K</a>
+                    <a href="https://elvapero.es/products/merrymi-kitty-20k-caladas-20000">Kitty 20K</a>
+                    <a href="https://elvapero.es/products/merrymi-mecha-x-28k-caladas-28000">Mecha X 28K</a>
+                    <a href="https://elvapero.es/products/fumot-eco-2w1-50k-caladas-50000">Eco 2 en 1 50K</a>
+                    <a href="https://www.elvapero.es/products/fumot-tornado-15k-caladas-15000">Tornado 15K</a>
+                    <a href="https://www.elvapero.es/products/fumot-t9000-9k-caladas-9000">T9000 9K</a>
+                    <a href="https://www.elvapero.es/products/jnr-quads-120k-caladas-120000">Quads 4 en 1 120K</a>
+                    <a href="https://elvapero.es/products/al-fakher-crown-bar-e-hose-x-60k-caladas-60000">Crown Bar
+                        EHose X 60K</a>
+                    <a href="https://elvapero.es/products/adalya-adl-pro-360-20k-caladas-20000">ADL Pro 360 20K</a>
+                    <a href="https://elvapero.es/products/airmez-12k-caladas-12000"> AirMez 12K</a>
+                    <a href="https://elvapero.es/products/blur-15000-15k-caladas-15000"> Blur 15K</a>
+                    <a href="https://elvapero.es/products/ghost-galaxy-25k-caladas-25000"> Galaxy 25K</a>
+                </div>
+                <div class="cont-col">
+                    <a href="#home" class="active">Página Principal</a>
+                    <a href="#sobre-nosotros">Sobre nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contacto">Preguntas frecuentes</a>
+                </div>
+            </div>
+            <div class="foot-cont-two">
+                <div>
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4C2.897 4 2 4.897 2 6V18C2 19.103 2.897 20 4 20H20C21.103 20 22 19.103 22 18V6C22 4.897 21.103 4 20 4ZM20 6L12 11L4 6H20ZM4 18V8L12 13L20 8V18H4Z" />
+                    </svg>
+                    <p>info@elvapero.es</p>
+                </div>
+                <div>
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M6.62 10.79C8.06 13.74 10.26 15.94 13.21 17.38L15.41 15.18C15.8 14.79 16.37 14.66 16.85 14.82C18.27 15.28 19.8 15.5 21.38 15.5C21.83 15.5 22.18 15.85 22.18 16.3V21.5C22.18 21.95 21.83 22.3 21.38 22.3C10.54 22.3 2.7 14.46 2.7 3.62C2.7 3.17 3.05 2.82 3.5 2.82H8.7C9.15 2.82 9.5 3.17 9.5 3.62C9.5 5.2 9.72 6.73 10.18 8.15C10.34 8.63 10.21 9.2 9.82 9.59L7.62 11.79Z" />
+                    </svg>
+                    <p>+34 663 167 736</p>
+                </div>
+            </div>
+        </div>
+        <div class="foot-cont-three">
+            <div class="city">
+                <p id="city">Vapers Desechables en España</p>
+            </div>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Madrid</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Barcelona</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Valencia</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Sevilla</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Zaragoza</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en M�laga</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Las Palmas de Gran Canaria</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Bilbao</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Murcia</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Valladolid</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en C�rdoba</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Palma de Mallorca</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Vigo</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Alicante</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en GijA�n</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Hospitalet de Llobregat</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Granada</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en A Coru�a</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Vitoria-Gasteiz</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Badalona</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Santa Cruz de Tenerife</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Oviedo</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Mstoles</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Elche</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Sabadell</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Santander</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Jerez de la Frontera</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en San Sebastin</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Legans</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Almera</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Cartagena</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Terrassa</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Alcal de Henares</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Fuenlabrada</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Pamplona</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Burgos</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Salamanca</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Albacete</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Len</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Getafe</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Alcorcn</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Cdiz</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Huelva</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Castelln de la Plana</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Badajoz</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Logroo</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Santa Coloma de Gramanet</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en La Laguna</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Lleida</a>
+            <a href="https://www.elvapero.es/">Vapers Desechables en Tarragona</a>
+        </div>
+        <div class="copyright">
+            <p> <span id="year"></span> MejoresVapers.es - Vapers Desechables en Espaa.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="footer.js"></script>
+    <script src="header.js"></script>
+</body>
+
+</html>
