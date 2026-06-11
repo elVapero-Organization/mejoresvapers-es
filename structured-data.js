@@ -4,7 +4,7 @@
         return;
     }
 
-    const fallbackSiteUrl = 'https://www.elvapero.es/';
+    const fallbackSiteUrl = 'https://www.mejoresvapers.es/';
     const text = (value) => (value || '').replace(/\s+/g, ' ').trim();
     const makeAbsoluteUrl = (value, base = fallbackSiteUrl) => {
         if (!value) {
@@ -18,21 +18,56 @@
         }
     };
 
+    const normalizeBaseUrl = (value) => {
+        if (!value) {
+            return fallbackSiteUrl;
+        }
+
+        try {
+            const url = new URL(value);
+            url.hash = '';
+            url.search = '';
+            return url.toString().endsWith('/') ? url.toString() : `${url.toString()}/`;
+        } catch (error) {
+            return fallbackSiteUrl;
+        }
+    };
+
+    const siteUrl = (() => {
+        const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
+        if (canonical) {
+            return normalizeBaseUrl(canonical);
+        }
+
+        if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+            return normalizeBaseUrl(window.location.origin);
+        }
+
+        return fallbackSiteUrl;
+    })();
+
     const pageUrl = (() => {
         if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
             return window.location.href.split('#')[0];
         }
 
-        return fallbackSiteUrl;
+        return siteUrl;
     })();
     const pageTitle = document.title.trim();
     const siteName = text(document.title.split('|')[0]) || 'MejoresVapers.es';
     const metaDescription = document.querySelector('meta[name="description"]')?.content?.trim() || '';
-    const inLanguage = document.documentElement.lang ? `${document.documentElement.lang}-ES` : 'es-ES';
-    const websiteId = `${fallbackSiteUrl}#website`;
-    const organizationId = `${fallbackSiteUrl}#organization`;
+    const inLanguage = (() => {
+        const rawLang = text(document.documentElement.lang).toLowerCase();
+        if (!rawLang) return 'es-ES';
+        if (rawLang === 'es' || rawLang.startsWith('es-')) return 'es-ES';
+        if (rawLang === 'pt' || rawLang.startsWith('pt-')) return 'pt-PT';
+        if (rawLang === 'en' || rawLang.startsWith('en-')) return 'en';
+        return rawLang;
+    })();
+    const websiteId = `${siteUrl}#website`;
+    const organizationId = `${siteUrl}#organization`;
     const breadcrumbId = `${pageUrl}#breadcrumb`;
-    const webpageId = `${pageUrl}#webpage`;
+    const collectionPageId = `${pageUrl}#collection-page`;
     const itemListId = `${pageUrl}#itemlist`;
 
     const badgePrimary = text(document.querySelector('.badge-text')?.textContent);
@@ -40,7 +75,7 @@
     const organizationName = badgePrimary && badgeSecondary
         ? `${badgePrimary}${badgeSecondary}.es`
         : siteName;
-    const logoUrl = makeAbsoluteUrl('favicon-96x96.png', fallbackSiteUrl);
+    const logoUrl = makeAbsoluteUrl('favicon-96x96.png', siteUrl);
     const emailText = text(Array.from(document.querySelectorAll('.foot-cont-two p')).find((node) => node.textContent.includes('@'))?.textContent);
     const phoneText = text(Array.from(document.querySelectorAll('.foot-cont-two p')).find((node) => node.textContent.includes('+'))?.textContent);
 
@@ -51,72 +86,48 @@
 
         return Array.from(section.querySelectorAll('.product-card, .list-item')).map((card) => {
             const shortName = text(card.querySelector('h3')?.textContent);
-            const link = makeAbsoluteUrl(card.querySelector('a[href]')?.getAttribute('href'), fallbackSiteUrl);
+            const link = makeAbsoluteUrl(card.querySelector('a[href]')?.getAttribute('href'), siteUrl);
             const image = makeAbsoluteUrl(card.querySelector('img')?.getAttribute('src'), pageUrl);
-            const description = text(card.querySelector('.product-desc, .item-details p, p')?.textContent);
-            const inferredBrand = isMixedSection ? shortName.split(/\s+/)[0] : brandFromSection;
-            const brand = text(inferredBrand);
-            const fullName = brand && !shortName.toLowerCase().startsWith(brand.toLowerCase())
-                ? `${brand} ${shortName}`
-                : shortName;
+            const fullName = shortName;
 
             if (!shortName || !link) {
                 return null;
             }
 
-            const product = {
-                '@type': 'Product',
-                '@id': `${link}#product`,
+            const item = {
+                '@type': 'Thing',
+                '@id': `${link}#thing`,
                 name: fullName,
                 url: link
             };
 
             if (image) {
-                product.image = image;
+                item.image = image;
             }
 
-            if (description) {
-                product.description = description;
-            }
-
-            if (brand) {
-                product.brand = {
-                    '@type': 'Brand',
-                    name: brand
-                };
-            }
-
-            if (sectionTitle) {
-                product.category = sectionTitle;
-            }
-
-            return product;
+            return item;
         }).filter(Boolean);
     }).slice(0, 12);
 
     const graph = [
         {
-            '@type': 'OnlineStore',
+            '@type': 'Organization',
             '@id': organizationId,
             name: organizationName,
-            url: fallbackSiteUrl,
+            url: siteUrl,
             logo: logoUrl,
-            areaServed: 'ES',
-            availableLanguage: ['es-ES'],
             contactPoint: [
                 emailText ? {
                     '@type': 'ContactPoint',
                     contactType: 'customer service',
                     email: emailText,
-                    availableLanguage: ['es-ES'],
-                    areaServed: 'ES'
+                    availableLanguage: [inLanguage]
                 } : null,
                 phoneText ? {
                     '@type': 'ContactPoint',
                     contactType: 'customer service',
                     telephone: phoneText,
-                    availableLanguage: ['es-ES'],
-                    areaServed: 'ES'
+                    availableLanguage: [inLanguage]
                 } : null
             ].filter(Boolean)
         },
@@ -124,8 +135,11 @@
             '@type': 'WebSite',
             '@id': websiteId,
             name: siteName,
-            url: fallbackSiteUrl,
-            inLanguage
+            url: siteUrl,
+            publisher: {
+                '@id': organizationId
+            },
+            inLanguage: inLanguage
         },
         {
             '@type': 'BreadcrumbList',
@@ -135,54 +149,49 @@
                     '@type': 'ListItem',
                     position: 1,
                     name: 'Inicio',
-                    item: fallbackSiteUrl
+                    item: siteUrl
                 }
             ]
         }
     ];
 
-    const webpage = {
+    const collectionPage = {
         '@type': 'CollectionPage',
-        '@id': webpageId,
+        '@id': collectionPageId,
         url: pageUrl,
         name: pageTitle,
+        inLanguage: inLanguage,
         isPartOf: {
             '@id': websiteId
         },
-        about: {
-            '@id': organizationId
-        },
         breadcrumb: {
             '@id': breadcrumbId
-        },
-        inLanguage
+        }
     };
 
     if (metaDescription) {
-        webpage.description = metaDescription;
+        collectionPage.description = metaDescription;
     }
 
     if (products.length > 0) {
-        webpage.mainEntity = {
+        collectionPage.mainEntity = {
             '@id': itemListId
         };
     }
 
-    graph.push(webpage);
+    graph.push(collectionPage);
 
     if (products.length > 0) {
         graph.push({
             '@type': 'ItemList',
             '@id': itemListId,
-            name: 'Productos destacados',
+            name: pageTitle,
             numberOfItems: products.length,
             itemListOrder: 'https://schema.org/ItemListOrderAscending',
-            itemListElement: products.map((product, index) => ({
+            itemListElement: products.map((item, index) => ({
                 '@type': 'ListItem',
                 position: index + 1,
-                url: product.url,
-                name: product.name,
-                item: product
+                item: item
             }))
         });
     }
